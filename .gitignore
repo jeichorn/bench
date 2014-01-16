@@ -1,4 +1,2 @@
 vendor
 composer.phar
-config/
-!config/example.php
