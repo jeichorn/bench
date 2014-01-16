@@ -1,0 +1,15 @@
+{
+    "name": "Bench",
+    "config": {
+        "preferred-install": "dist"
+    },
+    "require": {
+        "guzzle/guzzle": "~3.7",
+        "symfony/console": "~2.3"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-0": {  "Bench": "src/" }
+    }
+}
