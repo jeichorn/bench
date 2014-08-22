@@ -70,21 +70,24 @@ class Runner
         // histogram iterations
         $iterations = $this->report['iterations'];
         sort($iterations);
-        $min = $iterations[0];
-        $max = $iterations[($this->config->iterations - 1)];
+        $min = $this->down($iterations[0], 100);
+        $max = $this->up($iterations[($this->config->iterations - 1)], 100);
+
+
         $size = ($max-$min)/10;
 
         $histogram = [];
-        for($i = 0; $i < 10; $i++)
+        for($i = 0; $i < 11; $i++)
         {
             $i = (float)$i;
-            $key = round(($i*$size+$min),5);
+            $key = round((($i*$size)+$min),3);
             $histogram[(string)$key] = 0;
         }
+
         foreach($iterations as $iter)
         {
             $iter = (float)$iter;
-            $key = (string)round(($iter - fmod($iter,$size)+$min),5);
+            $key = (string)round(($iter - ($iter%$size)),3);
             @$histogram[$key]++;
         }
         $this->report['iterations'] = $histogram;
@@ -181,9 +184,9 @@ class Runner
 
     public function processFailure($response, $path, $type = 'page')
     {
-        $time = microtime(true)-$this->start;
+        $time = round(microtime(true)-$this->start,3) * 1000;
         @$this->report['failure']++;
-        @$this->report['failure_time'] = $time;
+        @$this->report['failure_time'] += $time;
         @$this->report[$type]['byCode'][$response->getResponseCode()]++;
         @$this->report['byCode'][$response->getResponseCode()]++;
 
@@ -192,10 +195,10 @@ class Runner
 
     public function processSuccess($response, $path, $type = 'page')
     {
-        $time = microtime(true)-$this->start;
+        $time = round(microtime(true)-$this->start,3) * 1000;
         $this->iterationTime += $time;
         @$this->report['success']++;
-        @$this->report['success_time'] = $time;
+        @$this->report['success_time'] += $time;
         @$this->report[$type]['success']++;
         @$this->report[$type]['byCode'][$response->getResponseCode()]++;
         @$this->report['byCode'][$response->getResponseCode()]++;
@@ -253,7 +256,7 @@ class Runner
 
                 if (!empty($parts['query']))
                 {
-                    $query .= '?'.$parts['query'];
+                    $url .= '?'.$parts['query'];
                 }
                 $this->urls[$url] = true;
                 //echo "found $url\n";
@@ -268,5 +271,17 @@ class Runner
 
     public function loadAssets($dom)
     {
+    }
+
+    public function down($value, $clamp)
+    {
+        $mod = $value % $clamp;
+        return $value - $mod;
+    }
+
+    public function up($value, $clamp)
+    {
+        $mod = $value % $clamp;
+        return $value - $mod + $clamp;
     }
 }
