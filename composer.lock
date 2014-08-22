@@ -8,6 +8,7 @@
     "packages": [
         {
             "name": "guzzle/guzzle",
+<<<<<<< HEAD
             "version": "v3.9.1",
             "source": {
                 "type": "git",
@@ -18,6 +19,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/92d9934f2fca1da15178c91239576ae26e505e60",
                 "reference": "92d9934f2fca1da15178c91239576ae26e505e60",
+=======
+            "version": "v3.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle3.git",
+                "reference": "54991459675c1a2924122afbb0e5609ade581155"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/54991459675c1a2924122afbb0e5609ade581155",
+                "reference": "54991459675c1a2924122afbb0e5609ade581155",
+>>>>>>> Update deps
                 "shasum": ""
             },
             "require": {
@@ -61,7 +74,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.8-dev"
+                    "dev-master": "3.9-dev"
                 }
             },
             "autoload": {
@@ -96,21 +109,38 @@
                 "rest",
                 "web service"
             ],
+<<<<<<< HEAD
             "time": "2014-05-07 17:04:22"
         },
         {
             "name": "symfony/console",
             "version": "v2.5.2",
+=======
+            "time": "2014-08-11 04:32:36"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.5.3",
+>>>>>>> Update deps
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
+<<<<<<< HEAD
                 "reference": "386fa63407805959bd2c5fe540294721ad4224c8"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/Console/zipball/386fa63407805959bd2c5fe540294721ad4224c8",
                 "reference": "386fa63407805959bd2c5fe540294721ad4224c8",
+=======
+                "reference": "cd2d1e4bac2206b337326b0140ff475fe9ad5f63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/cd2d1e4bac2206b337326b0140ff475fe9ad5f63",
+                "reference": "cd2d1e4bac2206b337326b0140ff475fe9ad5f63",
+>>>>>>> Update deps
                 "shasum": ""
             },
             "require": {
@@ -141,33 +171,57 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com",
                     "homepage": "http://fabien.potencier.org",
                     "role": "Lead Developer"
                 },
                 {
+=======
+>>>>>>> Update deps
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
+<<<<<<< HEAD
             "time": "2014-07-15 14:15:12"
         },
         {
             "name": "symfony/event-dispatcher",
             "version": "v2.5.2",
+=======
+            "time": "2014-08-05 09:00:40"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v2.5.3",
+>>>>>>> Update deps
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
+<<<<<<< HEAD
                 "reference": "2215d2ef6fd7ab24d55576a3d924df575c741762"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/2215d2ef6fd7ab24d55576a3d924df575c741762",
                 "reference": "2215d2ef6fd7ab24d55576a3d924df575c741762",
+=======
+                "reference": "8faf5cc7e80fde74a650a36e60d32ce3c3e0457b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/8faf5cc7e80fde74a650a36e60d32ce3c3e0457b",
+                "reference": "8faf5cc7e80fde74a650a36e60d32ce3c3e0457b",
+>>>>>>> Update deps
                 "shasum": ""
             },
             "require": {
@@ -200,28 +254,36 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com",
                     "homepage": "http://fabien.potencier.org",
                     "role": "Lead Developer"
                 },
                 {
+=======
+>>>>>>> Update deps
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
+<<<<<<< HEAD
             "time": "2014-07-09 09:05:48"
+=======
+            "time": "2014-07-28 13:20:46"
+>>>>>>> Update deps
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
+<<<<<<< HEAD
     "stability-flags": [
 
     ],
@@ -232,4 +294,9 @@
     "platform-dev": [
 
     ]
+=======
+    "stability-flags": [],
+    "platform": [],
+    "platform-dev": []
+>>>>>>> Update deps
 }
